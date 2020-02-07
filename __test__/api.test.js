@@ -31,16 +31,16 @@ describe('Categories API', () => {
   });
 
 
-  //   it('Post the work' , ()=> {
-  //     let newVal = { name: 'lena' , kids : 3 , favourites : [ 'food', 'read', 'cook', 'pets']};
-  //     return mockRequest.post('/api/v1/categories')
-  //       .send(newVal)
-  //       .then(data => {
-  //         Object.keys(newVal).forEach(value => {
-  //           expect(data.body[value]).toEqual(newVal[value]);
-  //         });
-  //       });
-  //   });
+  it('Post the work' , ()=> {
+    let newVal = { name: 'lena' , kids : 3 , favourites : [ 'food', 'read', 'cook', 'pets']};
+    return mockRequest.post('/api/v1/categories')
+      .send(newVal)
+      .then(data => {
+        Object.keys(newVal).forEach(value => {
+          expect(data.body[value]).toEqual(newVal[value]);
+        });
+      });
+  });
 
 
   it('Updating the work' , ()=> {
